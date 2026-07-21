@@ -23,3 +23,29 @@ function GetHumanChoice() {
 //Создать переменную humanScore и инициализировать 0
 let computerScore = 0;
 let humanScore = 0;
+
+//Создать функцию PlayRound с параметрами humanChoice и computerChoice
+//Прописать условный выражение с определением победителя
+//В зависимости от победителя увеличивать на 1 переменные computerScore и humanScore
+function PlayRound(humanChoice, computerChoice) {
+  if (humanChoice == computerChoice) {
+    console.log(`Ничья! Оба игрока выбрали ${humanChoice}`);
+  } else if (
+    (humanChoice == "Rock" && computerChoice == "Paper") ||
+    (humanChoice == "Paper" && computerChoice == "Scissors") ||
+    (humanChoice == "Scissors" && computerChoice == "Rock")
+  ) {
+    console.log(`Компьютер побеждает! ${computerChoice} бьет ${humanChoice}`);
+    computerScore += 1;
+  } else {
+    console.log(`Человек побеждает! ${humanChoice} бьет ${computerChoice}`);
+    humanScore += 1;
+  }
+}
+
+const computerSelection = GetComputerChoice();
+const humanSelection = GetHumanChoice();
+
+PlayRound(humanSelection, computerSelection);
+console.log(`Счет компьютера: ${computerScore}`);
+console.log(`Счет человека: ${humanScore}`);

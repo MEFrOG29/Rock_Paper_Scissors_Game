@@ -1,0 +1,40 @@
+[33mcommit c72adbe16a241cdf9f04a9cb7ed1506810c0505b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: MEFrOG <vadyasha4@gmail.com>
+Date:   Tue Jul 21 13:44:28 2026 +0300
+
+    Added variables to store the score
+    
+    Created a `computerScore` variable to store the computer's score.
+    Created a `humanScore` variable to store the human's score.
+
+[33mcommit ec3b5969ab0c49c3dd81080b45c0bf260298e06e[m
+Author: MEFrOG <vadyasha4@gmail.com>
+Date:   Tue Jul 21 13:40:20 2026 +0300
+
+    Create GetHumanChoice function
+    
+    I declared the `GetHumanChoice` function, which accepts a number from the user and outputs their choice
+
+[33mcommit 6d11e62bad0cd82920668ac55c414ffbfc7901a4[m
+Author: MEFrOG <vadyasha4@gmail.com>
+Date:   Tue Jul 21 13:22:16 2026 +0300
+
+    Create GetComputerChoice function
+    
+    I declared the `GetComputerChoice` function, which randomly returns either Rock, Paper, or Scissors.
+
+[33mcommit 1debb9fbebc1e850f77155fe3af696a118915dcc[m
+Author: MEFrOG <vadyasha4@gmail.com>
+Date:   Tue Jul 21 13:04:59 2026 +0300
+
+    Create index.html and script.js files
+    
+    I created an HTML file and an external JS script.
+    I linked them using the `<script>` tag.
+    I logged "Hello World!" to the console.
+
+[33mcommit c5760410415d2c84ba0e1c302820be92f7c3060a[m
+Author: Никита Медик <vadyasha4@gmail.com>
+Date:   Tue Jul 21 12:56:51 2026 +0300
+
+    Initial commit
