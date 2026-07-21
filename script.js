@@ -29,23 +29,38 @@ let humanScore = 0;
 //В зависимости от победителя увеличивать на 1 переменные computerScore и humanScore
 function PlayRound(humanChoice, computerChoice) {
   if (humanChoice == computerChoice) {
-    console.log(`Ничья! Оба игрока выбрали ${humanChoice}`);
+    alert(
+      `Ничья! Оба игрока выбрали ${humanChoice}\n Компьютер - ${computerScore}\n Человек - ${humanScore}`,
+    );
   } else if (
     (humanChoice == "Rock" && computerChoice == "Paper") ||
     (humanChoice == "Paper" && computerChoice == "Scissors") ||
     (humanChoice == "Scissors" && computerChoice == "Rock")
   ) {
-    console.log(`Компьютер побеждает! ${computerChoice} бьет ${humanChoice}`);
     computerScore += 1;
+    alert(
+      `Компьютер побеждает! ${computerChoice} бьет ${humanChoice}\n Компьютер - ${computerScore}\n Человек - ${humanScore}`,
+    );
   } else {
-    console.log(`Человек побеждает! ${humanChoice} бьет ${computerChoice}`);
     humanScore += 1;
+    alert(
+      `Человек побеждает! ${humanChoice} бьет ${computerChoice}\n Компьютер - ${computerScore}\n Человек - ${humanScore}`,
+    );
   }
 }
 
-const computerSelection = GetComputerChoice();
-const humanSelection = GetHumanChoice();
+//Создать функцию PlayGame.
+//Прописать цикл for, в котором вызывать функцию PlayGame
+//Вывести результаты игры и сообщение о победителе
+function PlayGame() {
+  for (let i = 0; i < 5; i++) {
+    PlayRound(GetHumanChoice(), GetComputerChoice());
+  }
+  if (humanScore > computerScore) {
+    console.log(`Человек побеждает со счетом ${humanScore}:${computerScore}`);
+  } else {
+    console.log(`Компьютер побеждает со счетом ${computerScore}:${humanScore}`);
+  }
+}
 
-PlayRound(humanSelection, computerSelection);
-console.log(`Счет компьютера: ${computerScore}`);
-console.log(`Счет человека: ${humanScore}`);
+PlayGame();
