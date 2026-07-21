@@ -7,7 +7,6 @@ function GetComputerChoice() {
   let choice = Math.floor(Math.random() * 3);
   return choice == 0 ? "Rock" : choice == 1 ? "Paper" : "Scissors";
 }
-console.log(GetComputerChoice());
 
 //Объявить функцию GetHumanChoice
 //Создать переменную choice
@@ -19,4 +18,8 @@ function GetHumanChoice() {
   let choice = prompt(`1 - Rock \n2 - Paper \n3 - Scissors`);
   return choice == 1 ? "Rock" : choice == 2 ? "Paper" : "Scissors";
 }
-console.log(GetHumanChoice());
+
+//Создать переменную computerScore и инициализировать 0
+//Создать переменную humanScore и инициализировать 0
+let computerScore = 0;
+let humanScore = 0;
